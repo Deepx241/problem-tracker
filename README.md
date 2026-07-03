@@ -1,69 +1,193 @@
-> [!IMPORTANT]
->
-> A simple NEXT.js web application that displays the data fetched from the API endpoint in a user-friendly way. 
+# 🚀 Problem Tracker
 
----
-<div align="left">
-    <h3>🚀 <a href="https://lc-dashboard.vercel.app/">Live Demo</a> 🚀</h3>
-    <img src="./public/dashboard.png" alt="LC Dashboard" width="100%">
-</div>
+A full-stack Problem Tracker application built to help programmers organize, track, and analyze their coding practice across platforms like LeetCode, Codeforces, GeeksforGeeks, HackerRank, and more.
 
+## ✨ Features
 
-### TODO 🌟
-
-- [x] Fetch data from the API endpoint.
-- [x] Display the data in a user-friendly way.
-- [X] Add a search bar to search for problems.
-- [X] Add a feature to **filter** problems based on tags.
-- ~~[ ] Add a feature to mark problems as **done**, for each user.~~
-- [X] Fix the tags filter by name, not `data-slug`.
-- [X] Add Pagination.
-- [X] Disable `Next` button when reached the last problem.
-- [X] Add a feature to Highlight the problems that are Premium.
-- [X] Make the Application Responsive.
-
-
-### 🛠 Tech Stack
-
-- [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vercel](https://vercel.com/)
-- [Axios](https://axios-http.com/)
+- 🔐 Secure JWT Authentication
+- 👤 User Registration & Login
+- ➕ Add coding problems
+- ✏️ Edit existing problems
+- 🗑️ Delete problems
+- 🔍 Search problems by title
+- 🎯 Filter by:
+  - Platform
+  - Difficulty
+  - Status
+  - Topic
+- 📊 Analytics Dashboard
+  - Problems solved
+  - Difficulty distribution
+  - Status overview
+- 📄 Pagination
+- 🌙 Clean responsive UI
+- ☁️ MongoDB Atlas integration
+- 🔒 Protected API routes
 
 ---
 
-<a href="https://github.com/yashksaini-coder">
-    <table>
-        <tbody>
-            <tr>
-                <td align="left" valign="top" width="14.28%">
-                    <img src="https://github.com/yashksaini-coder.png?s=60" width="130px;"/>
-                    <br/>
-                    <h4 align="center">
-                        <b>Yash K. Saini</b>
-                    </h4>
-                    <div align="center">
-                        <p>(Author)</p>
-                    </div>
-                </td>
-                <td align="left" valign="top" width="85%">
-                    <p>
-                        👋 Hi there! I'm <u><em><strong>Yash K. Saini</strong></em></u>, a self-taught software developer and a computer science student from India.
-                    </p>
-                    <ul>
-                     <li>
-                        I love building & contributing to Open Source software solutions & projects that help solve real-world problems.
-                    </li>
-                    <li>
-                        I want to build products & systems that can benefit & solve problems for many other DEVs.
-                    </li>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</a>
+## 🛠 Tech Stack
 
-<p align="center">
-    <strong>🌟 If you find this project helpful, please give it a star on GitHub! 🌟</strong>
-</p>
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Axios
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- bcrypt
+- CORS
+
+---
+
+## 📂 Project Structure
+
+```
+problem-tracker/
+│
+├── app/
+├── components/
+├── lib/
+├── public/
+│
+├── server/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── config/
+│   │   └── server.js
+│   ├── package.json
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Deepx241/problem-tracker.git
+```
+
+```
+cd problem-tracker
+```
+
+---
+
+## Install Frontend
+
+```bash
+npm install
+```
+
+---
+
+## Install Backend
+
+```bash
+cd server
+npm install
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file inside the `server` folder.
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## Run Backend
+
+```bash
+cd server
+npm run dev
+```
+
+Runs on:
+
+```
+http://localhost:5000
+```
+
+---
+
+## Run Frontend
+
+```bash
+npm run dev
+```
+
+Runs on:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📸 Features Preview
+
+- User Authentication
+- Dashboard
+- Add Problem
+- Edit Problem
+- Delete Problem
+- Search
+- Filters
+- Pagination
+- Analytics
+
+---
+
+## Future Improvements
+
+- Dark/Light Theme
+- Profile Page
+- Notes Editor
+- Company-wise Tracking
+- Contest History
+- Import from LeetCode
+- Export Progress
+- Streak Tracking
+- Mobile App
+
+---
+
+## Author
+
+**Deep Kevadiya**
+
+GitHub:
+https://github.com/Deepx241
+
+LinkedIn:
+https://www.linkedin.com/in/deep-kevadiya-690303322/
+
+---
+
+## License
+
+This project is licensed under the MIT License.
