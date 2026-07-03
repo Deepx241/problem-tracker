@@ -1,7 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL:
+    typeof window !== "undefined"
+      ? (process.env.NEXT_PUBLIC_API_URL as string) + "/api"
+      : "/api",
 });
 
 api.interceptors.request.use((config) => {
@@ -9,6 +12,7 @@ api.interceptors.request.use((config) => {
     const token = localStorage.getItem("token");
 
     if (token) {
+      config.headers = config.headers || {};
       config.headers.Authorization = `Bearer ${token}`;
     }
   }
