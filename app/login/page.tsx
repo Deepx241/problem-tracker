@@ -4,10 +4,15 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import api from "@/lib/api";
 
+type FormState = {
+  email: string;
+  password: string;
+};
+
 export default function LoginPage() {
   const router = useRouter();
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormState>({
     email: "",
     password: "",
   });
@@ -32,8 +37,12 @@ export default function LoginPage() {
       localStorage.setItem("token", res.data.token);
 
       router.push("/dashboard");
-    } catch (err: any) {
-      alert(err.response?.data?.message || "Login failed");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        alert(err.message || "Login failed");
+      } else {
+        alert("Login failed");
+      }
     }
   };
 

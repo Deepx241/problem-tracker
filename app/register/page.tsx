@@ -4,10 +4,16 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import api from "@/lib/api";
 
+type FormState = {
+  name: string;
+  email: string;
+  password: string;
+};
+
 export default function RegisterPage() {
   const router = useRouter();
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
     password: "",
@@ -33,8 +39,12 @@ export default function RegisterPage() {
       localStorage.setItem("token", res.data.token);
 
       router.push("/dashboard");
-    } catch (err: any) {
-      alert(err.response?.data?.message || "Registration failed");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        alert(err.message || "Registration failed");
+      } else {
+        alert("Registration failed");
+      }
     }
   };
 
