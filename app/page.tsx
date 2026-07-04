@@ -108,7 +108,7 @@ export default function Home() {
             <li className="text-white mb-3 text-sm sm:text-base flex flex-wrap items-center"> 
               Check the
               <Link 
-                href="https://github.com/yashksaini-coder/LC-Dashboard" 
+                href="https://github.com/Deepx241/problem-tracker" 
                 target="_blank"
                 className="mx-2 px-3 py-0.5 bg-white text-black hover:bg-cyan-700 hover:text-white font-bold transition-colors"
               >
